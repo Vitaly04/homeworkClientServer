@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class ClientMain {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException {
         InetSocketAddress socketAddress = new InetSocketAddress("127.0.0.1", 55334);
         final SocketChannel socketChannel = SocketChannel.open();
         socketChannel.connect(socketAddress);

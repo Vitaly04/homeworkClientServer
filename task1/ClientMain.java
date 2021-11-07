@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ClientMain {
     // выбран блокирующий ввод-вывод, потому что нет смысла делать неблокирующий ввод/вывод
     // клиент будет ожидать решение сервера а потом уже применять вычисление дальше для своих нужд
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException {
         Socket socket = new Socket("127.0.0.1", 55334);
         try (BufferedReader in = new BufferedReader(
                 new InputStreamReader(socket.getInputStream()));
